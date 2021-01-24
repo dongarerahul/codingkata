@@ -16,8 +16,8 @@ class GildedRoseTest {
     }
 
     private String doUpdateQuality (String name, Integer sellIn, Integer quality) {
-        Item[] items = new Item[]{new Item(name, sellIn, quality)};
-        GildedRose app = new GildedRose(items);
+        com.emily.Item[] items = new com.emily.Item[]{new com.emily.Item(name, sellIn, quality)};
+        com.emily.GildedRose app = new com.emily.GildedRose(items);
         app.updateQuality();
         return app.items[0].toString();
     }
