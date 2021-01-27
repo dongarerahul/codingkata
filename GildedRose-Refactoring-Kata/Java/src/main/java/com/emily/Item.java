@@ -2,7 +2,10 @@ package com.emily;
 
 public class Item {
 
-    public String name;
+    public static final int CLOSE_TO_EXPIRY = 11;
+    public static final int MAX_QUALITY = 50;
+    public static final int FAR_FROM_EXPIRY = 6;
+    public final String name;
 
     public int sellIn;
 
