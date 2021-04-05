@@ -1,5 +1,7 @@
 package com.gildedrose.christianClausen;
 
+import com.emily.GildedRose;
+import com.emily.Item;
 import org.junit.jupiter.api.Test;
 
 import static org.approvaltests.combinations.CombinationApprovals.verifyAllCombinations;
@@ -15,10 +17,11 @@ class GildedRoseTest {
                 new Integer[] { 0, 1, 49, 50 } );
     }
 
-    private String doUpdateQuality (String name, Integer sellIn, Integer quality) {
-        com.emily.Item[] items = new com.emily.Item[]{com.emily.Item.createItem(name, sellIn, quality)};
-        com.emily.GildedRose app = new com.emily.GildedRose(items);
+    private String doUpdateQuality (String name, int sellIn, int quality) {
+        Item[] items = new Item[] { Item.createItem(name, sellIn, quality)};
+        GildedRose app = new GildedRose(items);
         app.updateQuality();
         return app.items[0].toString();
     }
 }
+
